@@ -9,7 +9,7 @@ const Homepage = () => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-    // console.log(name + lastname, email, contact);
+    console.log(name + lastname, email, contact);
     emailjs
       .sendForm(
         "service_nlvjld9",
@@ -42,7 +42,7 @@ const Homepage = () => {
           value={lastname}
           className="w-100"
           type="text"
-          lastname="user_lastname"
+          name="user_lastname"
           onChange={(e) => setlastname(e.target.value)}
         />
         <label> Contact no.</label>
@@ -50,7 +50,7 @@ const Homepage = () => {
           className="w-100"
           type="text"
           value={contact}
-          contact="user_number"
+          name="user_number"
           onChange={(e) => setcontact(e.target.value)}
         />
         <label>Email</label>
@@ -58,7 +58,7 @@ const Homepage = () => {
           className="w-100"
           value={email}
           type="text"
-          email="user_email"
+          name="user_email"
           onChange={(e) => setemail(e.target.value)}
         />
         <label>Message</label>
